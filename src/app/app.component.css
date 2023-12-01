@@ -1,0 +1,40 @@
+.regular-price {
+  text-decoration: line-through;
+  color:#eaeaea;
+}
+.savings-label {
+  background-color:#bb0628;
+  color:#fff;
+}
+.timer {
+  background-color: #1d252c;
+  color: #fff;
+  display: block;
+  font-size: 30px;
+  width: 50px;
+  border-radius: 4px;
+  font-weight: 500;
+  padding-left:7px;
+}
+.timer-text {
+  width: 55px;
+  font-size: 11px;
+  letter-spacing: 0;
+  margin: 2px -5px;
+  text-transform: uppercase;
+}
+.timesep {
+  font-size: 35px;
+  font-weight: 500;
+}
+.navbar {
+  background:#0046be;
+}
+.product-description {
+  min-width:727px;
+}
+.product-image {
+  min-width:141px;
+  max-width:141px;
+  max-height:138px;
+}

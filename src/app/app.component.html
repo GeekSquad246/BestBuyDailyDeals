@@ -1,0 +1,55 @@
+<nav class="navbar">
+  <div class="container">
+  <a class="navbar-brand" href="#">
+    <img src="./assets/logo.png" width="170" height="100" alt="">
+  </a>
+  <input type="text" class="form-control col-3" [(ngModel)]="searchText" aria-label="Filter by product title" placeholder="Enter product name to filter">
+  </div>
+</nav>
+
+<div class="col-12">
+  <div class="container">
+    <ul class="nav justify-content-end mt-4 mb-3">
+      <h1 class="text-uppercase pr-5">Time Left</h1>
+      <li class="nav-item">
+        <span class="timer" id="hours"></span>
+        <p class="timer-text text-center pl-1">Hours</p>
+      </li>
+      <li class="timesep ml-1 mr-1">:</li>
+      <li class="nav-item">
+        <span class="timer" id="minutes"></span>
+        <p class="timer-text text-center pl-1">Minutes</p>
+      </li>
+      <li class="timesep ml-1 mr-1">:</li>
+      <li class="nav-item">
+        <span class="timer" id="seconds"></span>
+        <p class="timer-text text-center pl-1">Seconds</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let product of products?.products | productFilter : searchText">
+      <div class="row">
+        <div class="col-xs-2 col-md-2">
+         <img src='{{product.image}}' class="product-image">
+        </div>
+        <div class="col-sm-4 product-description d-inline-block">
+          <h5 class="ml-4"><a [attr.href]="product.url">{{product.name}}</a></h5>
+        </div>
+        <div class="col-xs-3 pl-5">
+          <div class="row">
+            <h5 class="ml-1 regular-price">${{product.regularPrice}}</h5> <h5 class="ml-1">${{product.salePrice}}</h5>
+          </div>
+          <h6 class="savings-label pl-1 pr-1">Save ${{product.dollarSavings}}</h6>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+  
+
+
+
